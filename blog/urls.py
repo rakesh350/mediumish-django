@@ -20,4 +20,5 @@ app_name = 'blog'
 
 urlpatterns = [
     path('all_post/', views.home, name = 'all_posts'),
+    path('<int:post_id>/', views.detail, name = 'detail'),
 ]

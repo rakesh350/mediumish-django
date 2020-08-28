@@ -30,12 +30,11 @@
 
       <!-- begin post -->
       <div class="card">
-          <a href="post.html">
-              <!-- <img class="img-fluid" src="{% static 'blog/assets/img/demopic/5.jpg' %}" alt=""> -->
+          <a href="{% url 'blog:detail' blog.id %}">
               <img class="img-fluid" src="{{ blog.featuredImage.url }}" alt="{{ blog.title|truncatechars:50 }}">
           </a>
           <div class="card-block">
-              <h2 class="card-title"><a href="post.html">{{ blog.title|truncatechars:50 }}</a></h2>
+              <h2 class="card-title"><a href="{% url 'blog:detail' blog.id %}">{{ blog.title|truncatechars:50 }}</a></h2>
               <h4 class="card-text">{{ blog.description|striptags|truncatechars:100 }}</h4>
               <div class="metafooter">
                   <div class="wrapfooter">
