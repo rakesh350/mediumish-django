@@ -12,3 +12,15 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+# About Blog
+class About(models.Model):
+    site_title = models.CharField(max_length = 100)
+    site_description = models.TextField()
+    meta_tags = models.CharField(max_length = 500)
+    created_ts = models.DateField()
+    updated_ts = models.DateField(null=True)
+
+    def __str__(self):
+        return self.site_title
